@@ -1,0 +1,18 @@
+.lista li {
+    display:inline;
+    padding: 10px;
+    margin-left: 135px;
+}
+.menu {
+    background-color:lightblue;
+    margin: 10px;
+}
+.barra {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+.imagenes {
+    height: 40px;
+    width: 40px;
+}
