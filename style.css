@@ -1,18 +1,17 @@
 .lista li {
     display:inline;
-    padding: 10px;
-    margin-left: 135px;
-}
-.menu {
-    background-color:lightblue;
     margin: 10px;
 }
 .barra {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 25px;
     color: black;
 }
 .imagenes {
     height: 40px;
     width: 40px;
+}
+.logo1 {
+    height: 50px;
+    width: 80px;
 }
