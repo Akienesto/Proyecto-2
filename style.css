@@ -1,3 +1,4 @@
+/* IMAGENES MODIFICADAS */
 .imagenes {
     height: 40px;
     width: 40px;
@@ -6,6 +7,18 @@
     height: 50px;
     width: 80px;
 }
+.img-fondo {
+    height:547px;
+}
+.cuerpo {
+    background-color:black;
+}
+.lineas {
+    height: 60px;
+    width: 80px;
+    padding: 10px;
+}
+/* NEGRITAS */
 .resultado1,
 .resultado2,
 .puntos,
@@ -13,10 +26,7 @@
     font-weight: bold;
     font-size: 18px;
 }
-.lineas {
-    width: 50px;
-    height: 30px;
-}
+/* NAV-BAR */
 .enlaces {
     width: 80px;
     text-align: center;
@@ -24,29 +34,33 @@
     font-size: 20px;
     font-weight: bold;
 }
+/* TARJETAS (4) */
 .centrar {
     display: flex;
     justify-content: center;
     height: 320px;
 }
+.tarjetas {
+    height: 250px;
+}
+/* MARGENES CELDAS */
 p {
     margin: 0px;
 }
 td {
     padding: 0px;
 }
-.img-fondo {
-    height:547px;
-}
-.cuerpo {
-    background-color:black;
-}
+/* TITULARES CLAS,PART */
 .titulares {
     text-align: center;
     padding: 15px;
 }
-.tarjetas {
-    height: 250px;
+.cent {
+    text-align: center;
+}
+/* COLORES CLASIF */
+.posicion{
+    text-align: center;
 }
 table .tabla tr:nth-of-type(1)>td:first-of-type{
     background-color:rgb(175, 247, 181);
