@@ -22,8 +22,10 @@ function crearTabla(matches) {
         visitante.innerHTML = matches[i].awayTeam.name;
         let resultado1 = document.createElement("p");
         resultado1.innerHTML = matches[i].score.fullTime.homeTeam;
+        resultado1.classList.add("resultado1");
         let resultado2 = document.createElement("p");
         resultado2.innerHTML = matches[i].score.fullTime.awayTeam;
+        resultado2.classList.add("resultado2");
         let fecha = document.createElement("p");
         fecha.innerHTML = matches[i].utcDate;
         let jornada = document.createElement("p");

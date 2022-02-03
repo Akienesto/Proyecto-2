@@ -13,17 +13,22 @@ let clasificacion = (datos2.standings[0].table);
 //     console.log((clasificacion[i].goalsAgainst))
 //     console.log((clasificacion[i].goalDifference))
 // }
+
 function crearTabla(lista) {
     let tabla_body = document.getElementById("tabla_body");
     for (let i = 0; i < lista.length; i++) {
         const tr = document.createElement("tr");
+        let posicion = document.createElement("p");
+        posicion.innerHTML = lista[i].position;
+        posicion.classList.add("posicion");
         let escudos = document.createElement("img");
         escudos.setAttribute("src",lista[i].team.crestUrl)
-        escudos.classList.add("imagenes")
+        escudos.classList.add("imagenes");
         let equipos = document.createElement("p");
         equipos.innerHTML = lista[i].team.name;
         let puntos = document.createElement("p");
         puntos.innerHTML = lista[i].points;
+        puntos.classList.add("puntos");
         let pj = document.createElement("p");
         pj.innerHTML = lista[i].playedGames;
         let pg = document.createElement("p");
@@ -38,7 +43,7 @@ function crearTabla(lista) {
         gc.innerHTML = lista[i].goalsAgainst;
         let dg = document.createElement("p");
         dg.innerHTML = lista[i].goalDifference;
-        let datos3 = [escudos, equipos, puntos, pj, pg, pp, pe, gf, gc, dg];
+        let datos3 = [posicion ,escudos, equipos, puntos, pj, pg, pp, pe, gf, gc, dg];
         for (let j = 0; j < datos3.length; j++) {
             const td = document.createElement("td");
             td.append(datos3[j]);

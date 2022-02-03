@@ -11,46 +11,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-light bg-primary">
+<body class = "cuerpo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img src="imagenes/Logo pequeño.png" alt="Logo" width="30" height="24"
-                    class=" logo1 d-inline-block align-text-top">
-            </a>
-            <ul class="lista">
-                <li><a class="barra" href="home.html">Home</a></li>
-                <li><a class="barra" href="partidos.html">Partidos</a></li>
-                <li><a class="barra" href="clasificacion.html">Clasificación</a></li>
+          <a class="navbar-brand" href="home.html">
+            <img src="imagenes/Logo pequeño.png" alt="" width="30" height="24" class=" logo1">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active enlaces" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active enlaces" href="partidos.html">Partidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active enlaces" href="clasificacion.html">Clasificación</a>
+              </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
+          </div>
         </div>
     </nav>
     <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark " data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active portada">
                 <div class="card bg-dark text-white">
-                    <img src="imagenes/Logo  de LaLiga.jfif" class="card-img" alt="...">
-                    <div class="card-img-overlay tarjetas">
-                        <h5 class="card-title text-center">FICHAJES</h5>
+                    <img src="imagenes/Logo  de LaLiga.jfif" class="card-img img-fondo" alt="logo">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title text-center">FICHAJES</h3>
                         <p class="card-text"></p>
                         <p class="card-text"></p>
-                        <div class="card mb-3 mx-auto border border-dark border-3 align-middle position-absolute top-50 start-50 translate-middle"
-                            style="max-width: 600px;">
+                        <div class="card mb-3 mx-auto border border-dark border-3 align-middle position-absolute top-50 start-50 translate-middle tarjetas"
+                        style="max-width: 600px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="imagenes/fichajes.jpg" class="img-fluid  h-100 d-inline-block"
+                                    <img src="imagenes/fichajes.jpg" class="img-fluid tarjetas ficha"
                                         alt="ultimos fichajes">
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="card-body text-light bg-dark">
+                                    <div class="card-body text-light bg-dark tarjetas">
                                         <h5 class="card-title">Últimos fichajes</h5>
-                                        <p class="card-text">Toda la información sobre los últimos fichajes del mercado
+                                        <br>
+                                        <p class="card-text align-middle">Toda la información sobre los últimos fichajes del mercado
                                             español y europeo.
-                                        </p>
+                                        </p><br><br>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
                                         </p>
                                         <a href="https://www.marca.com/futbol/primera-division/2022/01/05/61cb32c0e2704e45b28b45ab.html"
@@ -64,62 +75,69 @@
             </div>
             <div class="carousel-item">
                 <div class="card bg-dark text-white">
-                    <img src="imagenes/calendario.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay tarjetas">
-                        <h5 class="card-title text-center">TODAS LAS COMPETICIONES</h5>
+                    <img src="imagenes/calendario.jpg" class="card-img" alt="calendario">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title text-center">TODAS LAS COMPETICIONES</h3>
                         <p class="card-text"></p>
                         <p class="card-text"></p>
                         <div class="row row-cols-1 row-cols-md-2 g-4">
-                            <div class="col">
-                              <div class="card w-50 p-3 bg-dark text-white">
-                                <img src="imagenes/champions.jfif" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col centrar">
+                                <div class="card w-50 p-3 bg-dark text-white">
+                                   <a href="https://es.uefa.com/uefachampionsleague/"><img src="imagenes/champions.jfif" class="card-img-top" alt="champions league"></a> 
+                                    <div class="card-body">
+                                        <h5 class="card-title">Champions League</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                            <div class="col">
-                              <div class="card w-50 p-3 bg-dark text-white">
-                                <img src="imagenes/cuartos-de-final-copa-rey-1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col centrar">
+                                <div class="card w-50 p-3 bg-dark text-white">
+                                    <a href="https://www.rfef.es/noticias/competiciones/copa-del-rey"><img src="imagenes/cuartos-de-final-copa-rey-1.jpg" class="card-img-top"alt="copa del rey"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Copa del Rey</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                            <div class="col">
-                              <div class="card w-50 p-3 bg-dark text-white">
-                                <img src="imagenes/europa league.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <div class="col centrar">
+                                <div class="card w-50 p-3 bg-dark text-white">
+                                    <a href="https://es.uefa.com/uefaeuropaleague/"><img src="imagenes/europa league.jpg" class="card-img-top " alt="europa league" height="160"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Europa League</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content.</p>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                            <div class="col">
-                              <div class="card w-50 p-3 bg-dark text-white">
-                                <img src="imagenes/supercopa.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col centrar">
+                                <div class="card w-50 p-3 bg-dark text-white">
+                                    <a href="https://www.rfef.es/noticias/competiciones/supercopa"><img src="imagenes/supercopa.jpg" class="card-img-top" alt="supercopa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Supercopa</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="imagenes/tabla de posiciones.jpg" class="d-block w-100" alt="Clasificación">
+                <img src="imagenes/tabla de posiciones.jpg" class="d-block w-100 img-fondo" alt="Clasificación">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden opacity-100">Previous</span>
+            <span class="carousel-control-prev-icon bg-danger" aria-hidden="true"></span>
+            <span class="visually-hidden opacity-50">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon bg-danger" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>

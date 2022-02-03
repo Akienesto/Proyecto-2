@@ -1,12 +1,3 @@
-.lista li {
-    display:inline;
-    margin: 10px;
-}
-.barra {
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-}
 .imagenes {
     height: 40px;
     width: 40px;
@@ -14,4 +5,73 @@
 .logo1 {
     height: 50px;
     width: 80px;
+}
+.resultado1,
+.resultado2,
+.puntos,
+.posicion {
+    font-weight: bold;
+    font-size: 18px;
+}
+.lineas {
+    width: 50px;
+    height: 30px;
+}
+.enlaces {
+    width: 80px;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.centrar {
+    display: flex;
+    justify-content: center;
+    height: 320px;
+}
+p {
+    margin: 0px;
+}
+td {
+    padding: 0px;
+}
+.img-fondo {
+    height:547px;
+}
+.cuerpo {
+    background-color:black;
+}
+.titulares {
+    text-align: center;
+    padding: 15px;
+}
+.tarjetas {
+    height: 250px;
+}
+table .tabla tr:nth-of-type(1)>td:first-of-type{
+    background-color:rgb(175, 247, 181);
+}
+table .tabla tr:nth-of-type(2)>td:first-of-type{
+    background-color:rgb(175, 247, 181);
+}
+table .tabla tr:nth-of-type(3)>td:first-of-type{
+    background-color:rgb(175, 247, 181);
+}
+table .tabla tr:nth-of-type(4)>td:first-of-type{
+    background-color:rgb(175, 247, 181);
+}
+table .tabla tr:nth-of-type(5)>td:first-of-type{
+    background-color:rgb(245, 247, 162);
+}
+table .tabla tr:nth-of-type(6)>td:first-of-type{
+    background-color:rgb(245, 247, 162);
+}
+table .tabla tr:nth-of-type(18)>td:first-of-type{
+    background-color:rgb(228, 143, 143);
+}
+table .tabla tr:nth-of-type(19)>td:first-of-type{
+    background-color:rgb(228, 143, 143);
+}
+table .tabla tr:nth-of-type(20)>td:first-of-type{
+    background-color:rgb(228, 143, 143);
 }
