@@ -34,8 +34,8 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Buscar equipo" aria-label="Search" id="buscarEq">
+          <button class="btn btn-outline-dark" type="button" id="boton">Search</button>
         </form>
       </div>
     </div>
@@ -48,12 +48,28 @@
       <h2>jornada a jornada</h2>
     </p>
   </div>
+  <div class="accordion-item acordeon">
+    <h2 class="accordion-header cent" id="headingTwo">
+      <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Filtrar partidos
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body acordeon1">
+        <button class = "botones botones1">Partidos ganados</button>
+        <button class = "botones botones2">Partidos empatados</button>
+        <button class = "botones botones3">Partidos perdidos</button>
+      </div>
+    </div>
+  </div>
   <table class="table table-hover container table-responsive">
     <thead class="tabla_head table-light">
-      <th colspan="2" class = "cent">Equipo local</th>
-      <th colspan="2">Resultado</th>
-      <th colspan="2" class = "cent">Equipo visitante</th>
-      <th class = "cent">Fecha</th>
+      <th colspan="2" class="cent">Equipo local</th>
+      <th class="resultado">Resultado</th>
+      <th colspan="2" class="cent">Equipo visitante</th>
+      <th>Fecha</th>
       <th>Jornada</th>
     </thead>
     <tbody class="border-end border-start" id="tabla_body">

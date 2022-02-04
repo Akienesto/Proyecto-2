@@ -19,10 +19,12 @@
     padding: 10px;
 }
 /* NEGRITAS */
-.resultado1,
-.resultado2,
 .puntos,
 .posicion {
+    font-weight: bold;
+    font-size: 18px;
+}
+table tbody tr td:nth-child(3){
     font-weight: bold;
     font-size: 18px;
 }
@@ -55,13 +57,37 @@ td {
     text-align: center;
     padding: 15px;
 }
-.cent {
+.cent,
+.posicion,
+.jornada {
     text-align: center;
 }
-/* COLORES CLASIF */
-.posicion{
-    text-align: center;
+/* ACORDEON PARTIDOS */
+.acordeon {
+    width: 1140px;
+    margin-left: 105px;
 }
+.acordeon1 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color:silver;
+}
+.botones {
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 5px 5px 10px 0 black;
+    border: black 3 px solid;
+}
+.botones1 {
+    background-color:rgb(175, 247, 181);
+}
+.botones2 {
+    background-color:rgb(245, 247, 162);
+}
+.botones3 {
+    background-color:rgb(228, 143, 143);
+}
+/* COLORES ACORDEON CLASIF */
 table .tabla tr:nth-of-type(1)>td:first-of-type{
     background-color:rgb(175, 247, 181);
 }
