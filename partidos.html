@@ -32,6 +32,9 @@
           <li class="nav-item">
             <a class="nav-link active enlaces" href="clasificacion.html">Clasificación</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active enlaces" href="estadisticas.html">Estadisticas</a>
+          </li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Buscar equipo" aria-label="Search" id="buscarEq">
@@ -49,8 +52,8 @@
     </p>
   </div>
   <div class="accordion-item acordeon">
-    <h2 class="accordion-header cent" id="headingTwo">
-      <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed bg-light puntos" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         Filtrar partidos
       </button>
@@ -58,9 +61,10 @@
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
       <div class="accordion-body acordeon1">
-        <button class = "botones botones1">Partidos ganados</button>
-        <button class = "botones botones2">Partidos empatados</button>
-        <button class = "botones botones3">Partidos perdidos</button>
+        <input type = "radio" value = "ganados" name = "partidos">Partidos ganados
+        <input type = "radio" value = "empatados" name = "partidos">Partidos empatados
+        <input type = "radio" value = "perdidos" name = "partidos">Partidos perdidos
+        <input type = "radio" value = "porJugar" name = "partidos">Partidos por jugar
       </div>
     </div>
   </div>

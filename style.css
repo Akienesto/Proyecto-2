@@ -7,9 +7,9 @@
     height: 50px;
     width: 80px;
 }
-.img-fondo {
+/* .img-fondo {
     height:547px;
-}
+} */
 .cuerpo {
     background-color:black;
 }
@@ -63,14 +63,18 @@ td {
     text-align: center;
 }
 /* ACORDEON PARTIDOS */
-.acordeon {
+/* .acordeon {
     width: 1140px;
     margin-left: 105px;
-}
+} */
 .acordeon1 {
     display: flex;
     justify-content: space-evenly;
-    background-color:silver;
+    background-color:aliceblue;
+}
+.acordeon2 {
+    display: flex;
+    justify-content: space-evenly;
 }
 .botones {
     border-radius: 10px;
