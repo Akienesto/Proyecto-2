@@ -36,6 +36,10 @@ table tbody tr td:nth-child(3){
     font-size: 20px;
     font-weight: bold;
 }
+.buscar,
+.reset {
+    margin: 10px;
+}
 /* TARJETAS (4) */
 .centrar {
     display: flex;
@@ -69,8 +73,28 @@ td {
 } */
 .acordeon1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     background-color:aliceblue;
+}
+.ganados {
+    background-color:rgb(175, 247, 181) ;
+    padding: 10px;
+    border: 2px solid rgb(48, 145, 56);
+}
+.empatados {
+    background-color:rgb(245, 247, 162) ;
+    padding: 10px;
+    border: 2px solid rgb(202, 204, 61);
+}
+.perdidos {
+    background-color:rgb(228, 143, 143);
+    padding: 10px;
+    border: 2px solid rgb(207, 79, 79);
+}
+.jugar {
+    background-color:rgb(120, 169, 243) ;
+    padding: 10px;
+    border: 2px solid rgb(51, 108, 161);
 }
 .acordeon2 {
     display: flex;
@@ -91,6 +115,22 @@ td {
 .botones3 {
     background-color:rgb(228, 143, 143);
 }
+.logo1 {
+    height: 60px;
+    width: 130px;
+}
+.botonP {
+    padding: 0px;
+    background-color: darkblue;
+}
+.botonS {
+    padding: 0px;
+    background-color: white;
+}
+.botonL {
+    padding: 0px;
+    background-color: rgb(210, 226, 63);
+}
 /* COLORES ACORDEON CLASIF */
 table .tabla tr:nth-of-type(1)>td:first-of-type{
     background-color:rgb(175, 247, 181);
@@ -110,6 +150,9 @@ table .tabla tr:nth-of-type(5)>td:first-of-type{
 table .tabla tr:nth-of-type(6)>td:first-of-type{
     background-color:rgb(245, 247, 162);
 }
+table .tabla tr:nth-of-type(7)>td:first-of-type{
+    background-color:rgb(120, 169, 243);
+}
 table .tabla tr:nth-of-type(18)>td:first-of-type{
     background-color:rgb(228, 143, 143);
 }
@@ -118,4 +161,62 @@ table .tabla tr:nth-of-type(19)>td:first-of-type{
 }
 table .tabla tr:nth-of-type(20)>td:first-of-type{
     background-color:rgb(228, 143, 143);
+}
+/* SPINNER */
+.spinner {
+    margin-top: 50px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+/** page **/
+.cssloader {
+  padding-top: calc(15vh - 25px);
+}
+
+/** loader **/
+.sh1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #354952 transparent transparent transparent;
+  margin: 0 auto;
+  animation: shk1 1s ease-in-out infinite normal;
+}
+
+.sh2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent  transparent rgb(2, 117, 216) transparent ;
+  margin: -50px auto 0;
+  animation: shk2 1s ease-in-out infinite alternate;
+}
+
+/** animation starts here **/
+@keyframes shk1 {
+  0% {
+    transform: rotate(-360deg);
+  }  
+  
+  100% {
+  }
+}
+
+@keyframes shk2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+  }
+}
+
+.lt {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 10px;
 }

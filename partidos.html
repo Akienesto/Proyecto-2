@@ -38,36 +38,57 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Buscar equipo" aria-label="Search" id="buscarEq">
-          <button class="btn btn-outline-dark" type="button" id="boton">Search</button>
+          <button class="btn btn-outline-dark buscar" type="button" id="boton">Search</button>
+          <button class="btn btn-outline-dark reset" type="button" id="reset">Reset</button>
         </form>
       </div>
     </div>
   </nav>
   <div class="titulares">
     <p>
-      <h1>Calendario de partidos de La Liga</h1>
+      <h1>Calendario y resultados de La Liga</h1>
     </p>
     <p>
-      <h2>jornada a jornada</h2>
+      <h2>y las mejores ligas europeas</h2>
     </p>
   </div>
   <div class="accordion-item acordeon">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed bg-light puntos" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Filtrar partidos
+        Filtrar por resultado
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
       <div class="accordion-body acordeon1">
-        <input type = "radio" value = "ganados" name = "partidos">Partidos ganados
-        <input type = "radio" value = "empatados" name = "partidos">Partidos empatados
-        <input type = "radio" value = "perdidos" name = "partidos">Partidos perdidos
-        <input type = "radio" value = "porJugar" name = "partidos">Partidos por jugar
+        <p class="ganados"><input type="radio" value="ganados" name="partidos" class="botones1"> Partidos ganados</p>
+        <p class="empatados"><input type="radio" value="empatados" name="partidos" class="botones1"> Partidos empatados
+        </p>
+        <p class="perdidos"><input type="radio" value="perdidos" name="partidos" class="botones1"> Partidos perdidos</p>
+        <p class="jugar"><input type="radio" value="porJugar" name="partidos" class="botones1"> Partidos por jugar</p>
       </div>
     </div>
   </div>
+  <br>
+  <div class="accordion-item acordeon">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed bg-light puntos" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Filtrar por liga
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body acordeon1">
+        <button id="laLiga" class="botonLa"><img src="imagenes/LaLiga.svg.png" alt="la Liga" class="logo1"></button>
+        <button id="premier" class="botonP"><img src="imagenes/premier-league.jpg" alt="premier" class="logo1"></button>
+        <button id="serieA" class="botonS"><img src="imagenes/serieA.png" alt="serie A" class="logo1"></button>
+        <button id="ligue1" class="botonL"><img src="imagenes/ligue1.png" alt="ligue 1" class="logo1"></button>
+      </div>
+    </div>
+  </div>
+  <br>
   <table class="table table-hover container table-responsive">
     <thead class="tabla_head table-light">
       <th colspan="2" class="cent">Equipo local</th>
@@ -77,12 +98,29 @@
       <th>Jornada</th>
     </thead>
     <tbody class="border-end border-start" id="tabla_body">
+      <div class="alert alert-primary" role="alert" id="alerta1">
+        Introduce el nombre de un equipo.
+      </div>
+      <div class="alert alert-primary" role="alert" id="alerta2">
+        El equipo introducido no pertenece a esta liga.
+      </div>
+      <!-- <div class="alert alert-primary" role="alert" id="alerta1">
+        Introduce el nombre de un equipo.
+      </div>
+      <div class="alert alert-primary" role="alert" id="alerta1">
+        Introduce el nombre de un equipo.
+      </div> -->
     </tbody>
   </table>
+  <div class="cssloader" id="spinner">
+    <div class="sh1"></div>
+    <div class="sh2"></div>
+    <h4 class="lt">loading</h4>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
-  <script src="partidos.js"></script>
+  <!-- <script src="partidos.js"></script> -->
   <script src="index1.js"></script>
 </body>
 

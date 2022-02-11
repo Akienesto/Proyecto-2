@@ -1,18 +1,21 @@
-// console.log(datos2);
-console.log(datos2.standings[0].table)
-let clasificacion = (datos2.standings[0].table);
-// for (let i = 0; i < clasificacion.length; i++) {
-//     console.log((clasificacion[i].team))
-//     console.log((clasificacion[i].position))
-//     console.log((clasificacion[i].points))
-//     console.log((clasificacion[i].playedGames))
-//     console.log((clasificacion[i].won))
-//     console.log((clasificacion[i].lost))
-//     console.log((clasificacion[i].draw))
-//     console.log((clasificacion[i].goalsFor))
-//     console.log((clasificacion[i].goalsAgainst))
-//     console.log((clasificacion[i].goalDifference))
-// }
+function getFetch() {
+    const url = "https://api.football-data.org/v2/competitions/2014/standings";
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "X-Auth-Token": "43f17841c2c343cdba215bc1a0c80075"
+        }
+    }).then(response => {
+        if (response.ok)
+            return response.json();
+    }).then(datos2 => {
+        let clasificacion = datos2.standings[0].table;
+        console.log(clasificacion)
+        quitarSpinner();
+        crearTabla(clasificacion);
+    })
+}
+getFetch();
 
 function crearTabla(lista) {
     let tabla_body = document.getElementById("tabla_body");
@@ -53,4 +56,8 @@ function crearTabla(lista) {
     }
 }
 
-crearTabla(clasificacion);
+function quitarSpinner() {
+    let spinner = document.getElementById("spinner")
+    spinner.style.display = "none"
+    spinner.style.visibility = "hidden"
+}

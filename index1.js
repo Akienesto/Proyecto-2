@@ -1,13 +1,55 @@
-console.log(datos1.matches);
-// console.log(datos1.matches[0].awayTeam);
-// for (let i = 0; i < partidos.length; i++) {
-//     console.log((partidos[i].awayTeam))
-//     console.log((partidos[i].homeTeam))
-//     console.log((partidos[i].referees))
-//     console.log((partidos[i].score.fullTime))
-// }
-let partidos = (datos1.matches)
+quitarAlerta1();
+quitarAlerta2();
+function getFetch(url) {
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "X-Auth-Token": "43f17841c2c343cdba215bc1a0c80075"
+        }
+    }).then(response => {
+        if (response.ok)
+            return response.json();
+    }).then(datos1 => {
+        let partidos = datos1.matches;
+        console.log(partidos)
+        let boton = document.getElementById("boton");
+        boton.addEventListener("click", () => {
+            filtros(partidos);
+        })
+        let reset1 = document.getElementById("reset")
+        reset1.addEventListener("click",() => {
+            quitarAlerta1();
+            quitarAlerta2();
+            reset();
+            crearTabla(partidos);
+        })
+        quitarSpinner();
+        crearTabla(partidos);
+    })
+}
 
+getFetch("https://api.football-data.org/v2/competitions/2014/matches");
+
+let premier = document.getElementById("premier");
+premier.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2021/matches";
+    getFetch(url)
+})
+let serieA = document.getElementById("serieA");
+serieA.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2019/matches";
+    getFetch(url)
+})
+let ligue1 = document.getElementById("ligue1");
+ligue1.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2015/matches";
+    getFetch(url)
+})
+let laLiga = document.getElementById("laLiga");
+laLiga.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2014/matches";
+    getFetch(url)
+})
 function crearTabla(matches) {
     let tabla_body = document.getElementById("tabla_body");
     tabla_body.innerText = ""
@@ -42,17 +84,19 @@ function crearTabla(matches) {
         tabla_body.appendChild(tr);
     }
 }
-crearTabla(partidos);
-
-let boton = document.getElementById("boton");
-boton.addEventListener("click", () => {
-    filtros(partidos);
-})
-// let radioBoton = document.querySelector("input[type=radio]:checked")
-
+function reset() {
+    document.getElementById("reset").value = ""
+    let radioBoton = document.querySelectorAll("input[type=radio]")
+    for (i in radioBoton) {
+        radioBoton[i].checked = false;
+    }
+}
 function filtros(equipos) {
     let buscar = document.getElementById("buscarEq").value;
     let radioBoton = document.querySelector("input[type=radio]:checked")
+    if (buscar == "") {
+        return alerta1();
+    }
     let inputEq = equipos.filter(e => {
         if ((e.homeTeam.name.toLowerCase().includes(buscar.toLowerCase())) || (e.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()))) {
             return true;
@@ -60,17 +104,16 @@ function filtros(equipos) {
             return false;
         }
     })
-    
-    // crearTabla(inputEq);
-    // console.log(inputEq)
-
+    if (inputEq.length === 0) {
+        return alerta2();
+    }
     if (radioBoton === null) {
         return crearTabla(inputEq);
     }
     let resultados2 = inputEq.filter(r => {
         if (radioBoton.value === "ganados") {
-            if ((r.homeTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.score.winner == "HOME_TEAM") || 
-            (r.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()) && (r.awayTeam.name.toLowerCase()) && (r.score.winner == "AWAY_TEAM"))) {
+            if ((r.homeTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.score.winner == "HOME_TEAM") ||
+                (r.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()) && (r.awayTeam.name.toLowerCase()) && (r.score.winner == "AWAY_TEAM"))) {
                 return true;
             }
         }
@@ -78,18 +121,36 @@ function filtros(equipos) {
             return true;
         }
         if (radioBoton.value === "perdidos") {
-            if ((r.homeTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.score.winner == "AWAY_TEAM") || 
-            (r.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()) && (r.awayTeam.name.toLowerCase()) && (r.score.winner == "HOME_TEAM"))) {
+            if ((r.homeTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.score.winner == "AWAY_TEAM") ||
+                (r.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()) && (r.awayTeam.name.toLowerCase()) && (r.score.winner == "HOME_TEAM"))) {
                 return true;
             }
         }
         if (radioBoton.value === "porJugar" && r.status == "SCHEDULED") {
-        //     if ((r.homeTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.status == "SCHEDULED") || 
-        // (r.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()) && r.status == "SCHEDULED")) {
             return true;
         }
-    
     })
     console.log(resultados2);
     crearTabla(resultados2);
+}
+function quitarSpinner() {
+    let spinner = document.getElementById("spinner")
+    spinner.style.display = "none"
+    spinner.style.visibility = "hidden"
+}
+function alerta1() {
+    let alerta1 = document.getElementById("alerta1")
+    alerta1.style.display = "block"
+}
+function quitarAlerta1() {
+    let alerta1 = document.getElementById("alerta1")
+    alerta1.style.display = "none"
+}
+function alerta2() {
+    let alerta2 = document.getElementById("alerta2")
+    alerta2.style.display = "block"
+}
+function quitarAlerta2() {
+    let alerta2 = document.getElementById("alerta2")
+    alerta2.style.display = "none"
 }
