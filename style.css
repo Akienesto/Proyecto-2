@@ -3,20 +3,11 @@
     height: 40px;
     width: 40px;
 }
-.logo1 {
-    height: 50px;
-    width: 80px;
+.img-fondo {
+    height:450px;
 }
-/* .img-fondo {
-    height:547px;
-} */
 .cuerpo {
-    background-color:black;
-}
-.lineas {
-    height: 60px;
-    width: 80px;
-    padding: 10px;
+    background-color:rgb(2, 117, 216);
 }
 /* NEGRITAS */
 .puntos,
@@ -36,6 +27,24 @@ table tbody tr td:nth-child(3){
     font-size: 20px;
     font-weight: bold;
 }
+.enlaces1 {
+    width: 80px;
+    text-align: center;
+    margin-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.enlaces2 {
+    width: 80px;
+    text-align: center;
+    margin-left: 110px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo1 {
+    height: 60px;
+    width: 130px;
+}
 .buscar,
 .reset {
     margin: 10px;
@@ -44,7 +53,7 @@ table tbody tr td:nth-child(3){
 .centrar {
     display: flex;
     justify-content: center;
-    height: 320px;
+    height: 325px;
 }
 .tarjetas {
     height: 250px;
@@ -66,11 +75,11 @@ td {
 .jornada {
     text-align: center;
 }
-/* ACORDEON PARTIDOS */
-/* .acordeon {
+/* ACORDEON RESULTADO */
+.acordeon {
     width: 1140px;
     margin-left: 105px;
-} */
+}
 .acordeon1 {
     display: flex;
     justify-content:space-evenly;
@@ -100,12 +109,6 @@ td {
     display: flex;
     justify-content: space-evenly;
 }
-.botones {
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 5px 5px 10px 0 black;
-    border: black 3 px solid;
-}
 .botones1 {
     background-color:rgb(175, 247, 181);
 }
@@ -114,10 +117,6 @@ td {
 }
 .botones3 {
     background-color:rgb(228, 143, 143);
-}
-.logo1 {
-    height: 60px;
-    width: 130px;
 }
 .botonP {
     padding: 0px;
@@ -130,6 +129,11 @@ td {
 .botonL {
     padding: 0px;
     background-color: rgb(210, 226, 63);
+}
+.lineas {
+    height: 60px;
+    width: 80px;
+    padding: 10px;
 }
 /* COLORES ACORDEON CLASIF */
 table .tabla tr:nth-of-type(1)>td:first-of-type{
@@ -161,6 +165,36 @@ table .tabla tr:nth-of-type(19)>td:first-of-type{
 }
 table .tabla tr:nth-of-type(20)>td:first-of-type{
     background-color:rgb(228, 143, 143);
+}
+/* FOOTER */
+.redes {
+    display: flex;
+    justify-content:space-evenly;
+}
+.redes1 {
+    font-size: 22px;
+    margin:15px;
+    font-weight: bold;
+    color: black;
+}
+.facebook,
+.twitter,
+.instagram {
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 black;
+}
+.footer {
+    background-color: rgb(2, 117, 216);
+}
+/* ALERTAS */
+.alertas {
+    margin-left: 105px;
+    width : 1140px;
+    text-align: center;
 }
 /* SPINNER */
 .spinner {
@@ -220,3 +254,25 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
   font-weight: 100;
   letter-spacing: 10px;
 }
+@media only screen and (max-width: 700px) {
+    .alertas,
+    .acordeon {
+     margin:auto;
+     text-align: start;
+    }
+.acordeon1,
+.acordeon2 {
+    margin:0px;
+    display: flex;
+    justify-content: flex-start;
+}
+.ganados,
+.empatados,
+.perdidos,
+.jugar {
+    width:110px;
+}
+.query {
+    width:110px;
+}
+    }

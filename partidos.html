@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="home.html">
-        <img src="imagenes/Logo pequeño.png" alt="" width="30" height="24" class=" logo1">
+        <img src="imagenes/la-liga-logopequeño.png" alt="" width="30" height="24" class=" logo1">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,17 +23,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active enlaces" aria-current="page" href="home.html">Home</a>
+          <li class="nav-item enlaces1">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active enlaces" href="partidos.html">Partidos</a>
+          <li class="nav-item enlaces1">
+            <a class="nav-link active" href="partidos.html">Partidos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active enlaces" href="clasificacion.html">Clasificación</a>
+          <li class="nav-item enlaces1">
+            <a class="nav-link active" href="clasificacion.html">Clasificación</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active enlaces" href="estadisticas.html">Estadisticas</a>
+          <li class="nav-item enlaces2">
+            <a class="nav-link active" href="estadisticas.html">Estadisticas</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -45,12 +45,8 @@
     </div>
   </nav>
   <div class="titulares">
-    <p>
-      <h1>Calendario y resultados de La Liga</h1>
-    </p>
-    <p>
-      <h2>y las mejores ligas europeas</h2>
-    </p>
+      <h2>Calendario y resultados de La Liga</h2>
+      <h3>y las mejores ligas europeas</h3>
   </div>
   <div class="accordion-item acordeon">
     <h2 class="accordion-header" id="headingTwo">
@@ -81,10 +77,10 @@
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
       <div class="accordion-body acordeon1">
-        <button id="laLiga" class="botonLa"><img src="imagenes/LaLiga.svg.png" alt="la Liga" class="logo1"></button>
-        <button id="premier" class="botonP"><img src="imagenes/premier-league.jpg" alt="premier" class="logo1"></button>
-        <button id="serieA" class="botonS"><img src="imagenes/serieA.png" alt="serie A" class="logo1"></button>
-        <button id="ligue1" class="botonL"><img src="imagenes/ligue1.png" alt="ligue 1" class="logo1"></button>
+        <button id="laLiga" class="botonLa query"><img src="imagenes/LaLiga.svg.png" alt="la Liga" class="logo1 query"></button>
+        <button id="premier" class="botonP query"><img src="imagenes/premier-league.jpg" alt="premier" class="logo1 query"></button>
+        <button id="serieA" class="botonS query"><img src="imagenes/serieA.png" alt="serie A" class="logo1 query"></button>
+        <button id="ligue1" class="botonL query"><img src="imagenes/ligue1.png" alt="ligue 1" class="logo1 query"></button>
       </div>
     </div>
   </div>
@@ -98,16 +94,16 @@
       <th>Jornada</th>
     </thead>
     <tbody class="border-end border-start" id="tabla_body">
-      <div class="alert alert-primary" role="alert" id="alerta1">
+      <div class="alert alert-primary alertas" role="alert" id="alerta1">
         Introduce el nombre de un equipo.
       </div>
-      <div class="alert alert-primary" role="alert" id="alerta2">
+      <div class="alert alert-primary alertas" role="alert" id="alerta2">
         El equipo introducido no pertenece a esta liga.
       </div>
-      <!-- <div class="alert alert-primary" role="alert" id="alerta1">
-        Introduce el nombre de un equipo.
+      <div class="alert alert-primary alertas" role="alert" id="alerta3">
+        Los caracteres introducidos no son validos. Introduce sólo letras.
       </div>
-      <div class="alert alert-primary" role="alert" id="alerta1">
+      <!-- <div class="alert alert-primary" role="alert" id="alerta1">
         Introduce el nombre de un equipo.
       </div> -->
     </tbody>
@@ -121,7 +117,24 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
   <!-- <script src="partidos.js"></script> -->
-  <script src="index1.js"></script>
+  <script src="Javascript/index1.js"></script>
 </body>
+<footer>
+  <div class = "footer">
+      <div class = "redes">
+          <p class ="redes1">Siguenos en : </p>
+      <a class="" href="https://www.instagram.com/">
+          <img src="imagenes/instagram.png" alt="" width="30" height="24" class=" instagram">
+        </a>
+        <a class="" href="https://www.twitter.com/">
+          <img src="imagenes/twitter-bird-white-on-blue.jpg" alt="" width="30" height="24" class="twitter">
+        </a>
+        <a class="" href="https://www.facebook.com/">
+          <img src="imagenes/facebook.jpg" alt="" width="30" height="24" class=" facebook">
+        </a>
+      </div>
+  <p class="footer">Developed by Burzuri &copy;</p>
+</div>
+</footer>
 
 </html>

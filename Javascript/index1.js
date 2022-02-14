@@ -1,5 +1,6 @@
 quitarAlerta1();
 quitarAlerta2();
+quitarAlerta3();
 function getFetch(url) {
     fetch(url, {
         method: "GET",
@@ -14,12 +15,16 @@ function getFetch(url) {
         console.log(partidos)
         let boton = document.getElementById("boton");
         boton.addEventListener("click", () => {
+            quitarAlerta1();
+            quitarAlerta2();
+            quitarAlerta3();
             filtros(partidos);
         })
         let reset1 = document.getElementById("reset")
-        reset1.addEventListener("click",() => {
+        reset1.addEventListener("click", () => {
             quitarAlerta1();
             quitarAlerta2();
+            quitarAlerta3();
             reset();
             crearTabla(partidos);
         })
@@ -31,25 +36,26 @@ function getFetch(url) {
 getFetch("https://api.football-data.org/v2/competitions/2014/matches");
 
 let premier = document.getElementById("premier");
-premier.addEventListener("click",()=> {
+premier.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2021/matches";
     getFetch(url)
 })
 let serieA = document.getElementById("serieA");
-serieA.addEventListener("click",()=> {
+serieA.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2019/matches";
     getFetch(url)
 })
 let ligue1 = document.getElementById("ligue1");
-ligue1.addEventListener("click",()=> {
+ligue1.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2015/matches";
     getFetch(url)
 })
 let laLiga = document.getElementById("laLiga");
-laLiga.addEventListener("click",()=> {
+laLiga.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2014/matches";
     getFetch(url)
 })
+
 function crearTabla(matches) {
     let tabla_body = document.getElementById("tabla_body");
     tabla_body.innerText = ""
@@ -84,18 +90,25 @@ function crearTabla(matches) {
         tabla_body.appendChild(tr);
     }
 }
+
 function reset() {
     document.getElementById("reset").value = ""
     let radioBoton = document.querySelectorAll("input[type=radio]")
+    let buscarEq = document.getElementById("buscarEq")
+    buscarEq.value = "";
     for (i in radioBoton) {
         radioBoton[i].checked = false;
     }
 }
+
 function filtros(equipos) {
     let buscar = document.getElementById("buscarEq").value;
     let radioBoton = document.querySelector("input[type=radio]:checked")
     if (buscar == "") {
         return alerta1();
+    }
+    if (!isNaN(buscar)) {
+        return alerta3();
     }
     let inputEq = equipos.filter(e => {
         if ((e.homeTeam.name.toLowerCase().includes(buscar.toLowerCase())) || (e.awayTeam.name.toLowerCase().includes(buscar.toLowerCase()))) {
@@ -133,24 +146,39 @@ function filtros(equipos) {
     console.log(resultados2);
     crearTabla(resultados2);
 }
+
 function quitarSpinner() {
     let spinner = document.getElementById("spinner")
     spinner.style.display = "none"
     spinner.style.visibility = "hidden"
 }
+
 function alerta1() {
     let alerta1 = document.getElementById("alerta1")
     alerta1.style.display = "block"
 }
+
 function quitarAlerta1() {
     let alerta1 = document.getElementById("alerta1")
     alerta1.style.display = "none"
 }
+
 function alerta2() {
     let alerta2 = document.getElementById("alerta2")
     alerta2.style.display = "block"
 }
+
 function quitarAlerta2() {
     let alerta2 = document.getElementById("alerta2")
     alerta2.style.display = "none"
+}
+
+function alerta3() {
+    let alerta3 = document.getElementById("alerta3")
+    alerta3.style.display = "block"
+}
+
+function quitarAlerta3() {
+    let alerta3 = document.getElementById("alerta3")
+    alerta3.style.display = "none"
 }
