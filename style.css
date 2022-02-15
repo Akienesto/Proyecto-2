@@ -1,13 +1,42 @@
 /* IMAGENES MODIFICADAS */
-.imagenes {
-    height: 40px;
-    width: 40px;
+    /* IMAGENES HOME */
+.imagenFondo {
+    background-image:url(https://besthqwallpapers.com/Temp/15-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-1280x720.jpg);
+    height: 404px;
+    background-size:cover;
+    background-position:-10px -105px;
+}
+.imagenFondo1 {
+    background-image:url(https://besthqwallpapers.com/Temp/15-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-1280x720.jpg);
+    height: 60px;
 }
 .img-fondo {
     height:450px;
 }
+.img-fondo1 {
+    height:660px;
+}
 .cuerpo {
     background-color:rgb(2, 117, 216);
+}
+   /* ESCUDOS */
+.imagenes {
+    height: 40px;
+    width: 40px;
+}
+   /* ESCUDOS EQUIPOS HOME */
+.escudos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.imagenes1 {
+    height: 60px;
+    width: 60px;
+    margin-left: 70px;
+}
+.nombres {
+    text-align: center;
 }
 /* NEGRITAS */
 .puntos,
@@ -20,6 +49,7 @@ table tbody tr td:nth-child(3){
     font-size: 18px;
 }
 /* NAV-BAR */
+     /* HOME/CLASIFICACION/ESTADISTICAS */
 .enlaces {
     width: 80px;
     text-align: center;
@@ -27,6 +57,11 @@ table tbody tr td:nth-child(3){
     font-size: 20px;
     font-weight: bold;
 }
+.logo1 {
+    height: 60px;
+    width: 130px;
+}
+     /* PARTIDOS */
 .enlaces1 {
     width: 80px;
     text-align: center;
@@ -41,10 +76,6 @@ table tbody tr td:nth-child(3){
     font-size: 20px;
     font-weight: bold;
 }
-.logo1 {
-    height: 60px;
-    width: 130px;
-}
 .buscar,
 .reset {
     margin: 10px;
@@ -53,12 +84,15 @@ table tbody tr td:nth-child(3){
 .centrar {
     display: flex;
     justify-content: center;
-    height: 325px;
+    height: 285px;
 }
 .tarjetas {
-    height: 250px;
+    height: 240px;
 }
-/* MARGENES CELDAS */
+.card-body1 {
+    padding: 0px;
+}
+/* MARGENES CELDAS TABLAS*/
 p {
     margin: 0px;
 }
@@ -105,10 +139,6 @@ td {
     padding: 10px;
     border: 2px solid rgb(51, 108, 161);
 }
-.acordeon2 {
-    display: flex;
-    justify-content: space-evenly;
-}
 .botones1 {
     background-color:rgb(175, 247, 181);
 }
@@ -118,6 +148,7 @@ td {
 .botones3 {
     background-color:rgb(228, 143, 143);
 }
+/* BOTONES FILTRO POR LIGA */
 .botonP {
     padding: 0px;
     background-color: darkblue;
@@ -130,12 +161,17 @@ td {
     padding: 0px;
     background-color: rgb(210, 226, 63);
 }
+/* LEYENDA */
+.acordeon2 {
+    display: flex;
+    justify-content: space-evenly;
+}
 .lineas {
     height: 60px;
     width: 80px;
     padding: 10px;
 }
-/* COLORES ACORDEON CLASIF */
+/* COLORES CLASIFICACION */
 table .tabla tr:nth-of-type(1)>td:first-of-type{
     background-color:rgb(175, 247, 181);
 }
@@ -254,6 +290,7 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
   font-weight: 100;
   letter-spacing: 10px;
 }
+/* MEDIA QUERY */
 @media only screen and (max-width: 700px) {
     .alertas,
     .acordeon {
@@ -275,4 +312,4 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .query {
     width:110px;
 }
-    }
+}
