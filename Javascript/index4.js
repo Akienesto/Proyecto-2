@@ -40,22 +40,18 @@ function sacarEquipos(teams1) {
     let cuerpo = document.getElementById("tablaEquipos");
     cuerpo.innerText = ""
     for (let i = 0; i < teams1.length; i++) {
-        let div1 = document.createElement("div");
         let div = document.createElement("div");
+        div.classList.add("divEscudos");
         let web = document.createElement("a");
         web.setAttribute("href",teams1[i].website)
-        web.innerHTML = teams1[i].website;
         web.classList.add("web");
         let escudos = document.createElement("img");
         escudos.setAttribute("src",teams1[i].crestUrl)
         escudos.classList.add("imagenes1");
         let nombres = document.createElement("p");
-        nombres.innerHTML = teams1[i].name;
         nombres.classList.add("nombres");
-        div1.append(escudos);
-        div.appendChild(web);
-        div1.append(div)
-        div1.appendChild(nombres)
-        cuerpo.appendChild(div1);
+        div.append(escudos);
+        web.appendChild(div);
+        cuerpo.appendChild(web);
     }
 }

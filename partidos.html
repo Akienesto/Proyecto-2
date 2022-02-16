@@ -24,48 +24,60 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item enlaces1">
+          <li class="nav-item enlaces">
             <a class="nav-link active" aria-current="page" href="home.html">Home</a>
           </li>
-          <li class="nav-item enlaces1">
+          <li class="nav-item enlaces">
             <a class="nav-link active" href="partidos.html">Partidos</a>
           </li>
-          <li class="nav-item enlaces1">
+          <li class="nav-item enlaces">
             <a class="nav-link active" href="clasificacion.html">Clasificación</a>
           </li>
-          <li class="nav-item enlaces2">
+          <li class="nav-item enlaces">
             <a class="nav-link active" href="estadisticas.html">Estadisticas</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <!-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Buscar equipo" aria-label="Search" id="buscarEq">
           <button class="btn btn-outline-dark buscar" type="button" id="boton">Search</button>
           <button class="btn btn-outline-dark reset" type="button" id="reset">Reset</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
   <!-- HEADERS -->
   <div class="titulares">
-      <h2>Calendario y resultados de La Liga</h2>
-      <h3>y las mejores ligas europeas</h3>
+    <h2>Calendario y resultados de La Liga</h2>
+    <h3>y las mejores ligas europeas</h3>
   </div>
   <!-- FILTRAR POR RESULTADO -->
   <div class="accordion-item acordeon">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed bg-light puntos" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Filtrar por resultado
+        Filtrar por equipo y resultado
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
       <div class="accordion-body acordeon1">
-        <p class="ganados"><input type="radio" value="ganados" name="partidos" class="botones1"> Partidos ganados</p>
-        <p class="empatados"><input type="radio" value="empatados" name="partidos" class="botones1"> Partidos empatados
-        </p>
-        <p class="perdidos"><input type="radio" value="perdidos" name="partidos" class="botones1"> Partidos perdidos</p>
-        <p class="jugar"><input type="radio" value="porJugar" name="partidos" class="botones1"> Partidos por jugar</p>
+        <div class="botonesPartidos">
+          <p class="ganados"><input type="radio" value="ganados" name="partidos" class="botones1"> Partidos ganados</p>
+          <p class="empatados"><input type="radio" value="empatados" name="partidos" class="botones1"> Partidos
+            empatados
+          </p>
+          <p class="perdidos"><input type="radio" value="perdidos" name="partidos" class="botones1"> Partidos perdidos
+          </p>
+          <p class="jugar"><input type="radio" value="porJugar" name="partidos" class="botones1"> Partidos por jugar</p>
+        </div>
+        <div class="botonesBuscar">
+          <form class="d-flex">
+            <input class="form-control me-2 buscarEquipo" type="search" placeholder="Buscar equipo" aria-label="Search"
+              id="buscarEq">
+            <button class="btn btn-outline-dark buscar" type="button" id="boton">Search</button>
+            <button class="btn btn-outline-dark reset" type="button" id="reset">Reset</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -80,11 +92,15 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
-      <div class="accordion-body acordeon1">
-        <button id="laLiga" class="botonLa query"><img src="imagenes/LaLiga.svg.png" alt="la Liga" class="logo1 query"></button>
-        <button id="premier" class="botonP query"><img src="imagenes/premier-league.jpg" alt="premier" class="logo1 query"></button>
-        <button id="serieA" class="botonS query"><img src="imagenes/serieA.png" alt="serie A" class="logo1 query"></button>
-        <button id="ligue1" class="botonL query"><img src="imagenes/ligue1.png" alt="ligue 1" class="logo1 query"></button>
+      <div class="accordion-body acordeon2">
+        <button id="laLiga" class="botonLa query"><img src="imagenes/LaLiga.svg.png" alt="la Liga"
+            class="logo1 query"></button>
+        <button id="premier" class="botonP query"><img src="imagenes/premier-league.jpg" alt="premier"
+            class="logo1 query"></button>
+        <button id="serieA" class="botonS query"><img src="imagenes/serieA.png" alt="serie A"
+            class="logo1 query"></button>
+        <button id="ligue1" class="botonL query"><img src="imagenes/ligue1.png" alt="ligue 1"
+            class="logo1 query"></button>
       </div>
     </div>
   </div>
@@ -124,21 +140,21 @@
 </body>
 <!-- FOOTER -->
 <footer>
-  <div class = "footer">
-      <div class = "redes">
-          <p class ="redes1">Siguenos en : </p>
+  <div class="footer">
+    <div class="redes">
+      <p class="redes1">Siguenos en : </p>
       <a class="" href="https://www.instagram.com/">
-          <img src="imagenes/instagram.png" alt="" width="30" height="24" class=" instagram">
-        </a>
-        <a class="" href="https://www.twitter.com/">
-          <img src="imagenes/twitter-bird-white-on-blue.jpg" alt="" width="30" height="24" class="twitter">
-        </a>
-        <a class="" href="https://www.facebook.com/">
-          <img src="imagenes/facebook.jpg" alt="" width="30" height="24" class=" facebook">
-        </a>
-      </div>
-  <p class="footer">Developed by Burzuri &copy;</p>
-</div>
+        <img src="imagenes/instagram.png" alt="" width="30" height="24" class=" instagram">
+      </a>
+      <a class="" href="https://www.twitter.com/">
+        <img src="imagenes/twitter-bird-white-on-blue.jpg" alt="" width="30" height="24" class="twitter">
+      </a>
+      <a class="" href="https://www.facebook.com/">
+        <img src="imagenes/facebook.jpg" alt="" width="30" height="24" class=" facebook">
+      </a>
+    </div>
+    <p class="footer">Developed by Burzuri &copy;</p>
+  </div>
 </footer>
 
 </html>

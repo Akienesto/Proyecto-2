@@ -19,6 +19,12 @@
 .cuerpo {
     background-color:rgb(2, 117, 216);
 }
+/* CONTROLES CARRUSEL */
+.controles {
+    height: 15%;
+    top: 33%;
+    width: 86px;
+    }
    /* ESCUDOS */
 .imagenes {
     height: 40px;
@@ -27,16 +33,21 @@
    /* ESCUDOS EQUIPOS HOME */
 .escudos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
-.imagenes1 {
+.divEscudos {
     height: 60px;
     width: 60px;
-    margin-left: 70px;
+    margin: 35px;
 }
-.nombres {
-    text-align: center;
+.imagenes1 {
+    height: 100px;
+    width:100px;
+}
+.escudos img:hover {
+    transform: scale(1.3);
+    transition: transform 1s, border 1s;
 }
 /* NEGRITAS */
 .puntos,
@@ -49,7 +60,6 @@ table tbody tr td:nth-child(3){
     font-size: 18px;
 }
 /* NAV-BAR */
-     /* HOME/CLASIFICACION/ESTADISTICAS */
 .enlaces {
     width: 80px;
     text-align: center;
@@ -60,25 +70,6 @@ table tbody tr td:nth-child(3){
 .logo1 {
     height: 60px;
     width: 130px;
-}
-     /* PARTIDOS */
-.enlaces1 {
-    width: 80px;
-    text-align: center;
-    margin-left: 70px;
-    font-size: 20px;
-    font-weight: bold;
-}
-.enlaces2 {
-    width: 80px;
-    text-align: center;
-    margin-left: 110px;
-    font-size: 20px;
-    font-weight: bold;
-}
-.buscar,
-.reset {
-    margin: 10px;
 }
 /* TARJETAS (4) */
 .centrar {
@@ -118,6 +109,17 @@ td {
     display: flex;
     justify-content:space-evenly;
     background-color:aliceblue;
+}
+.botonesPartidos {
+    display: flex;
+}
+.reset {
+    margin: 5px;
+    background-color: lightgreen;
+}
+.buscar {
+    margin: 5px;
+    background-color:  rgb(2, 117, 216);
 }
 .ganados {
     background-color:rgb(175, 247, 181) ;
@@ -297,7 +299,11 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
      margin:auto;
      text-align: start;
     }
-.acordeon1,
+.acordeon1 {
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+}
 .acordeon2 {
     margin:0px;
     display: flex;
@@ -312,4 +318,27 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .query {
     width:110px;
 }
+.botonesPartidos {
+    display: flex;
+}
+.reset,
+.buscar {
+    margin: 10px;
+}
+.buscarEquipo {
+    width: min-content;
+    margin: 5px;
+}
+.divEscudos {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+.imagenes1 {
+    height: 50px;
+    width:50px;
+}
+/* .tarjetas {
+    
+} */
 }
