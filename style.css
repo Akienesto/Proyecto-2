@@ -302,6 +302,7 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .acordeon {
      margin:auto;
      text-align: start;
+     width:fit-content;
 }
 .acordeon1 {
     margin:0px;
@@ -351,15 +352,19 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     display: flex;
 }
 .card-text1 {
-    font-size: 12px;
+    font-size: 10px;
 }
 .card-title1 {
-    font-size: 17px;
+    font-size: 15px;
 }
 .cardImg {
     height: 70px;
 }
 .europaImg {
     height: 70px;
+}
+.imagenFondo {
+    background-image:url(https://besthqwallpapers.com/Temp/16-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-480x800.jpg);
+    background-position:-10px -125px;
 }
 }
