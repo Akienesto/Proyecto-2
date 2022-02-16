@@ -336,13 +336,13 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     margin: 5px;
 }
 .divEscudos {
-    height: 50px;
-    width: 50px;
-    margin: 20px;
+    height: 40px;
+    width: 40px;
+    margin: 15px;
 }
 .imagenes1 {
-    height: 50px;
-    width:50px;
+    height: 40px;
+    width:40px;
 }
 .tarjetas {
     height: min-content;  
