@@ -167,6 +167,14 @@ td {
     padding: 0px;
     background-color: rgb(210, 226, 63);
 }
+.botonLa {
+    padding: 0px;
+}
+.laLigaImg {
+    height:50px;
+    width: 120px;
+    padding: 5px;
+}
 /* LEYENDA */
 .acordeon2 {
     display: flex;
@@ -365,6 +373,6 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 }
 .imagenFondo {
     background-image:url(https://besthqwallpapers.com/Temp/16-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-480x800.jpg);
-    background-position:-10px -125px;
+    background-position: 0px -125px;
 }
 }
