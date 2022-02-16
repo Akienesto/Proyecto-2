@@ -125,21 +125,25 @@ td {
     background-color:rgb(175, 247, 181) ;
     padding: 10px;
     border: 2px solid rgb(48, 145, 56);
+    margin: 5px;
 }
 .empatados {
     background-color:rgb(245, 247, 162) ;
     padding: 10px;
     border: 2px solid rgb(202, 204, 61);
+    margin: 5px;
 }
 .perdidos {
     background-color:rgb(228, 143, 143);
     padding: 10px;
     border: 2px solid rgb(207, 79, 79);
+    margin: 5px;
 }
 .jugar {
     background-color:rgb(120, 169, 243) ;
     padding: 10px;
     border: 2px solid rgb(51, 108, 161);
+    margin: 5px;
 }
 .botones1 {
     background-color:rgb(175, 247, 181);
@@ -294,11 +298,11 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 }
 /* MEDIA QUERY */
 @media only screen and (max-width: 700px) {
-    .alertas,
-    .acordeon {
+.alertas,
+.acordeon {
      margin:auto;
      text-align: start;
-    }
+}
 .acordeon1 {
     margin:0px;
     display: flex;
@@ -314,6 +318,7 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .perdidos,
 .jugar {
     width:110px;
+    margin: 2px;
 }
 .query {
     width:110px;
@@ -338,7 +343,23 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     height: 50px;
     width:50px;
 }
-/* .tarjetas {
-    
-} */
+.tarjetas {
+    height: min-content;  
+}
+.tarjetas2,
+.tarjetas3 {
+    display: flex;
+}
+.card-text1 {
+    font-size: 12px;
+}
+.card-title1 {
+    font-size: 17px;
+}
+.cardImg {
+    height: 70px;
+}
+.europaImg {
+    height: 70px;
+}
 }
