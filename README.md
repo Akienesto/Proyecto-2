@@ -18,3 +18,11 @@ Página web diseñada para acceder a toda la información relativa a la liga de 
     * Tabla de equipos menos goleados como visitantes.
     * Posibilidad de filtrar por liga.
 ## Datos técnicos
+Se han usado varias funcionalidades aprendidas durante el desarrollo de este proyecto.
+function crearTabla(): La creacion de tablas dinámicas, creadas a partir de los datos de la API, de tal manera, que si quisieramos realizar el mismo proyecto para competiciones de otros paises, bastaria con cambiar un solo dato y seguiría siendo igual de funcional.
+
+function filtros(): Permite acceder a los resultados de los partidos según la selección que realiza previamente el usuario desde el formulario creado en HTML. La función de crearTabla(), es modificada por estos datos ya filtrados, mostrando asi, exclusivamente la información que solicita el usuario.
+
+function crearDesplegable(): Con ella creamos parte del formulario. La elección del equipo la realiza el usuario desde este desplegable, el cual esta formado por un listado de los equipos obtenido desde los datos de la API, por lo que si la competición fuera de otro país, estos equipos cambiarian automaticamente, tanto en la tabla como en el desplegable.
+
+function estadísticas(): Para esta funcionalidad, primero se han de descartar aquellos partidos que aun no han sido jugados. A partir de ahí, declarar las variables con los datos necesarios para poder realizar los cálculos, en este caso, partidos y goles. Una vez obtenidos los resultados de las estadísticas, la función debe acortar la array final para que la función crearTabla() muestre únicamente los cinco resultados que nos interesan en cada caso
