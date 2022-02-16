@@ -19,6 +19,7 @@ Página web diseñada para acceder a toda la información relativa a la liga de 
     * Posibilidad de filtrar por liga.
 ## Datos técnicos
 Se han usado varias funcionalidades aprendidas durante el desarrollo de este proyecto.
+
 function crearTabla(): La creacion de tablas dinámicas, creadas a partir de los datos de la API, de tal manera, que si quisieramos realizar el mismo proyecto para competiciones de otros paises, bastaria con cambiar un solo dato y seguiría siendo igual de funcional.
 
 function filtros(): Permite acceder a los resultados de los partidos según la selección que realiza previamente el usuario desde el formulario creado en HTML. La función de crearTabla(), es modificada por estos datos ya filtrados, mostrando asi, exclusivamente la información que solicita el usuario.
