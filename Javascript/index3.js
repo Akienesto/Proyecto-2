@@ -125,8 +125,6 @@ function estadisticas(stats) {
     }
     crearTabla(estPart);
 }
-// estadisticas(partidos);
-
 function estadisticas1(stats) {
     let estPart1 = []
     for (let i = 0; i < stats.length; i++) {

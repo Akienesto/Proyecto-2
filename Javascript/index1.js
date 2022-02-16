@@ -91,16 +91,6 @@ function crearTabla(matches) {
     }
 }
 
-function reset() {
-    document.getElementById("reset").value = ""
-    let radioBoton = document.querySelectorAll("input[type=radio]")
-    let buscarEq = document.getElementById("buscarEq")
-    buscarEq.value = "";
-    for (i in radioBoton) {
-        radioBoton[i].checked = false;
-    }
-}
-
 function filtros(equipos) {
     let buscar = document.getElementById("buscarEq").value;
     let radioBoton = document.querySelector("input[type=radio]:checked")
@@ -147,6 +137,16 @@ function filtros(equipos) {
     crearTabla(resultados2);
 }
 
+function reset() {
+    document.getElementById("reset").value = ""
+    let radioBoton = document.querySelectorAll("input[type=radio]")
+    let buscarEq = document.getElementById("buscarEq")
+    buscarEq.value = "";
+    for (i in radioBoton) {
+        radioBoton[i].checked = false;
+    }
+}
+
 function quitarSpinner() {
     let spinner = document.getElementById("spinner")
     spinner.style.display = "none"
@@ -157,27 +157,22 @@ function alerta1() {
     let alerta1 = document.getElementById("alerta1")
     alerta1.style.display = "block"
 }
-
 function quitarAlerta1() {
     let alerta1 = document.getElementById("alerta1")
     alerta1.style.display = "none"
 }
-
 function alerta2() {
     let alerta2 = document.getElementById("alerta2")
     alerta2.style.display = "block"
 }
-
 function quitarAlerta2() {
     let alerta2 = document.getElementById("alerta2")
     alerta2.style.display = "none"
 }
-
 function alerta3() {
     let alerta3 = document.getElementById("alerta3")
     alerta3.style.display = "block"
 }
-
 function quitarAlerta3() {
     let alerta3 = document.getElementById("alerta3")
     alerta3.style.display = "none"
