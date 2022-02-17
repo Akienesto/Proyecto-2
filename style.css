@@ -19,6 +19,9 @@
 .cuerpo {
     background-color:rgb(2, 117, 216);
 }
+.tarjetas {
+    height: 240px;
+}
 /* CONTROLES CARRUSEL */
 .controles {
     height: 15%;
@@ -71,17 +74,33 @@ table tbody tr td:nth-child(3){
     height: 60px;
     width: 130px;
 }
-/* TARJETAS (4) */
-.centrar {
+/*COMPETICIONES */
+.competiciones {
+    background-image: url(https://eu-images.contentstack.com/v3/assets/bltcc7a7ffd2fbf71f5/blta6b168eff2370246/60da748863584e0ecadfdb37/13adaf99ab4059393c95af79cecc097e17430966.jpg?auto=webp&fit=crop&format=jpg&height=800&quality=60&width=1200);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.competicionesImg {
+    height: 185px;
+    width: 300px;
+    margin:10px;
+}
+.championsEuropa,
+.copaSegunda {
     display: flex;
     justify-content: center;
-    height: 285px;
+    justify-content: space-evenly;
 }
-.tarjetas {
-    height: 240px;
-}
-.card-body1 {
-    padding: 0px;
+.texto {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(2, 117, 216);
+    display:inline-block;
+    margin-left: 460px;
+    padding: 3px;
+    border-radius: 5px;
 }
 /* MARGENES CELDAS TABLAS*/
 p {
@@ -352,27 +371,25 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     height: 40px;
     width:40px;
 }
-.tarjetas {
-    height: min-content;  
-}
-.tarjetas2,
-.tarjetas3 {
-    display: flex;
-}
-.card-text1 {
-    font-size: 10px;
-}
-.card-title1 {
-    font-size: 15px;
-}
-.cardImg {
-    height: 70px;
-}
-.europaImg {
-    height: 70px;
-}
 .imagenFondo {
     background-image:url(https://besthqwallpapers.com/Temp/16-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-480x800.jpg);
     background-position: 0px -125px;
+}
+.tarjetas {
+    height: min-content;  
+}
+.copaSegunda,
+.championsEuropa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.competicionesImg {
+    height: 93px;
+    width: 140px;
+    margin: 3px;
+}
+.texto {
+    margin:0px;
 }
 }

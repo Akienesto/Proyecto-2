@@ -1,5 +1,4 @@
-function getFetch() {
-    const url = "https://api.football-data.org/v2/competitions/2014/standings";
+function getFetch(url) {
     fetch(url, {
         method: "GET",
         headers: {
@@ -9,16 +8,38 @@ function getFetch() {
         if (response.ok)
             return response.json();
     }).then(datos2 => {
-        let clasificacion = datos2.standings[0].table;
+                let clasificacion = datos2.standings[0].table;
         console.log(clasificacion)
         quitarSpinner();
         crearTabla(clasificacion);
     })
 }
-getFetch();
+getFetch("https://api.football-data.org/v2/competitions/2014/standings");
+
+let premier = document.getElementById("premier");
+premier.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2021/standings";
+    getFetch(url)
+})
+let serieA = document.getElementById("serieA");
+serieA.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2019/standings";
+    getFetch(url)
+})
+let ligue1 = document.getElementById("ligue1");
+ligue1.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2015/standings";
+    getFetch(url)
+})
+let laLiga = document.getElementById("laLiga");
+laLiga.addEventListener("click",()=> {
+    const url = "https://api.football-data.org/v2/competitions/2014/standings";
+    getFetch(url)
+})
 
 function crearTabla(lista) {
     let tabla_body = document.getElementById("tabla_body");
+    tabla_body.innerText = ""
     for (let i = 0; i < lista.length; i++) {
         const tr = document.createElement("tr");
         let posicion = document.createElement("p");
