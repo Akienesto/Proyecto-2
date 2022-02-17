@@ -283,11 +283,12 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .empatados,
 .perdidos,
 .jugar {
-    width:110px;
-    margin: 2px;
+    width:100px;
+    margin: 0px;
+    padding: 0px;
 }
 .query {
-    width:110px;
+    width:95px;
 }
 .botonesPartidos {
     display: flex;
