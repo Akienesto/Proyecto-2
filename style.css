@@ -332,9 +332,9 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     margin:0px;
 }
 .controles {
-    height: 28%;
+    height: 80px;
     top: 33%;
-    width: 75px;
+    width: 20px;
 }
 }
 /* SPINNER */
