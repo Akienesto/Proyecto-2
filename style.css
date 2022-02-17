@@ -43,7 +43,7 @@ table tbody tr td:nth-child(3){
     height: 15%;
     top: 33%;
     width: 86px;
-    }
+}
    /* ESCUDOS */
 .imagenes {
     height: 40px;
@@ -331,7 +331,11 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .texto {
     margin:0px;
 }
-
+.controles {
+    height: 25%;
+    top: 33%;
+    width: 75px;
+}
 }
 /* SPINNER */
 .spinner {
