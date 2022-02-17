@@ -1,8 +1,7 @@
 /* IMAGENES MODIFICADAS */
-    /* IMAGENES HOME */
 .imagenFondo {
     background-image:url(https://besthqwallpapers.com/Temp/15-2-2022/laliga-black-logo-creative-metal-grid-background-football-leagues-laliga-logo-besthqwallpapers.com-1280x720.jpg);
-    height: 404px;
+    height: 392px;
     background-size:cover;
     background-position:-10px -105px;
 }
@@ -13,14 +12,31 @@
 .img-fondo {
     height:450px;
 }
-.img-fondo1 {
-    height:660px;
-}
 .cuerpo {
     background-color:rgb(2, 117, 216);
 }
 .tarjetas {
     height: 240px;
+}
+/* TITULARES CLAS,PART */
+.titulares {
+    text-align: center;
+    padding: 15px;
+}
+.cent,
+.posicion,
+.jornada {
+    text-align: center;
+}
+/* NEGRITAS */
+.puntos,
+.posicion {
+    font-weight: bold;
+    font-size: 18px;
+}
+table tbody tr td:nth-child(3){
+    font-weight: bold;
+    font-size: 18px;
 }
 /* CONTROLES CARRUSEL */
 .controles {
@@ -51,16 +67,6 @@
 .escudos img:hover {
     transform: scale(1.3);
     transition: transform 1s, border 1s;
-}
-/* NEGRITAS */
-.puntos,
-.posicion {
-    font-weight: bold;
-    font-size: 18px;
-}
-table tbody tr td:nth-child(3){
-    font-weight: bold;
-    font-size: 18px;
 }
 /* NAV-BAR */
 .enlaces {
@@ -98,7 +104,7 @@ table tbody tr td:nth-child(3){
     font-weight: bold;
     background-color: rgb(2, 117, 216);
     display:inline-block;
-    margin-left: 460px;
+    margin-left: 440px;
     padding: 3px;
     border-radius: 5px;
 }
@@ -109,17 +115,7 @@ p {
 td {
     padding: 0px;
 }
-/* TITULARES CLAS,PART */
-.titulares {
-    text-align: center;
-    padding: 15px;
-}
-.cent,
-.posicion,
-.jornada {
-    text-align: center;
-}
-/* ACORDEON RESULTADO */
+/* ACORDEON FILTRAR RESULTADO */
 .acordeon {
     width: 1140px;
     margin-left: 105px;
@@ -265,64 +261,6 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
     width : 1140px;
     text-align: center;
 }
-/* SPINNER */
-.spinner {
-    margin-top: 50px;
-}
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
-
-/** page **/
-.cssloader {
-  padding-top: calc(15vh - 25px);
-}
-
-/** loader **/
-.sh1 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 50px 50px 0 0;
-  border-color: #354952 transparent transparent transparent;
-  margin: 0 auto;
-  animation: shk1 1s ease-in-out infinite normal;
-}
-
-.sh2 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 50px 50px;
-  border-color: transparent  transparent rgb(2, 117, 216) transparent ;
-  margin: -50px auto 0;
-  animation: shk2 1s ease-in-out infinite alternate;
-}
-
-/** animation starts here **/
-@keyframes shk1 {
-  0% {
-    transform: rotate(-360deg);
-  }  
-  
-  100% {
-  }
-}
-
-@keyframes shk2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-  }
-}
-
-.lt {
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  margin: 30px auto;
-  text-align: center;
-  font-weight: 100;
-  letter-spacing: 10px;
-}
 /* MEDIA QUERY */
 @media only screen and (max-width: 700px) {
 .alertas,
@@ -392,4 +330,63 @@ table .tabla tr:nth-of-type(20)>td:first-of-type{
 .texto {
     margin:0px;
 }
+
+}
+/* SPINNER */
+.spinner {
+    margin-top: 50px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+/** page **/
+.cssloader {
+  padding-top: calc(15vh - 25px);
+}
+
+/** loader **/
+.sh1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #354952 transparent transparent transparent;
+  margin: 0 auto;
+  animation: shk1 1s ease-in-out infinite normal;
+}
+
+.sh2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent  transparent rgb(2, 117, 216) transparent ;
+  margin: -50px auto 0;
+  animation: shk2 1s ease-in-out infinite alternate;
+}
+
+/** animation starts here **/
+@keyframes shk1 {
+  0% {
+    transform: rotate(-360deg);
+  }  
+  
+  100% {
+  }
+}
+
+@keyframes shk2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+  }
+}
+
+.lt {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 10px;
 }
