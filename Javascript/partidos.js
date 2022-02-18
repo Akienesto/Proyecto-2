@@ -65,7 +65,7 @@ function crearTabla(matches) {
         let local1 = document.createElement("img");
         local1.setAttribute("src", "https://crests.football-data.org/" + matches[i].homeTeam.id + ".svg")
         local1.classList.add("imagenes")
-        let local = document.createElement("p");              //DECLARAR VARIABLES
+        let local = document.createElement("p");              //DECLARAR VARIABLES,ATRIBUTOS Y CLASES
         local.innerHTML = matches[i].homeTeam.name;
         let visitante1 = document.createElement("img");
         visitante1.setAttribute("src", "https://crests.football-data.org/" + matches[i].awayTeam.id + ".svg")
