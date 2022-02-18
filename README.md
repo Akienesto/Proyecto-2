@@ -12,7 +12,7 @@ Página web diseñada para acceder a toda la información relativa a la liga de 
     * Resultados de todos los partidos disputados hasta la fecha y calendario de los que restan por jugar.
     * Posibilidad de filtrar por resultado del partido y por liga.
 * Clasificación
-    * Clasificación de la liga española actualizada con todos los datos por equipo.
+    * Clasificación de la liga española y otras ligas europeas, actualizada con todos los datos por equipo.
 * Estadísticas
     * Tabla de eqipos con mejor media goleadora.
     * Tabla de equipos menos goleados como visitantes.
