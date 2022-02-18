@@ -7,7 +7,7 @@ Página web diseñada para acceder a toda la información relativa a la liga de 
 * Home (dividida en un carrusel con tres páginas) 
     * Enlaces a Champions league,Europa league,Copa del Rey y Segunda División.
     * Enlace a las noticias sobre fichajes.
-    * Enlaces a todas las páginas web de las ligas elegidas.
+    * Enlaces a todas las páginas web de los equipos de las ligas elegidas.
 * Partidos
     * Resultados de todos los partidos disputados hasta la fecha y calendario de los que restan por jugar.
     * Posibilidad de filtrar por resultado del partido y por liga.
