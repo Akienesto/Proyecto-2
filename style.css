@@ -24,8 +24,8 @@
     padding: 15px;
 }
 .cent,
-.posicion,
-.jornada {
+.jornada,
+.posicion {
     text-align: center;
 }
 /* NEGRITAS */

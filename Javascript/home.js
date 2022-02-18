@@ -16,6 +16,7 @@ function getFetch(url) {
 
 getFetch("https://api.football-data.org/v2/competitions/2014/teams");
 
+// COGER DATOS DE OTRAS LIGAS
 let premier = document.getElementById("premier");
 premier.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2021/teams";
@@ -36,7 +37,8 @@ laLiga.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2014/teams";
     getFetch(url)
 })
-function sacarEquipos(teams1) {
+// FUNCION PARA SACAR ESCUDOS Y LINKS DE EQUIPOS
+function sacarEquipos(teams1) {        
     let cuerpo = document.getElementById("tablaEquipos");
     cuerpo.innerText = ""
     for (let i = 0; i < teams1.length; i++) {

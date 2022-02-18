@@ -17,6 +17,7 @@ function getFetch(url) {
 }
 getFetch("https://api.football-data.org/v2/competitions/2014/matches");
 
+// COGER DATOS DE OTRAS LIGAS
 let premier = document.getElementById("premier");
 premier.addEventListener("click",()=> {
     const url = "https://api.football-data.org/v2/competitions/2021/matches";
@@ -37,27 +38,29 @@ laLiga.addEventListener("click",()=> {
     const url = "https://api.football-data.org/v2/competitions/2014/matches";
     getFetch(url)
 })
+
+// FUNCION PARA MEDIA GOLEADORA
 function estadisticas(stats) {
     let estPart = []
-    for (let i = 0; i < stats.length; i++) {
+     for (let i = 0; i < stats.length; i++) {   //COGER SOLO PARTIDOS ACABADOS
         let partidoFin = stats[i].status
         if (partidoFin != "FINISHED") {
             continue
         }
         let localId = stats[i].homeTeam.id
         let visitId = stats[i].awayTeam.id
-        let localName = stats[i].homeTeam.name
+        let localName = stats[i].homeTeam.name          //DECLARAR VARIABLES
         let visitName = stats[i].awayTeam.name
         let localGoals = stats[i].score.fullTime.homeTeam
         let visitGoals = stats[i].score.fullTime.awayTeam
 
-        let localFound;
+        let localFound;                  //ENCONTRAR EQUIPOS LOCALES
         estPart.forEach(x => {
             if (x.id === localId) {
                 localFound = x
             }
         })
-        if (localFound == undefined) {
+        if (localFound == undefined) {   //CREAR ARRAY estPart[] LOCAL
             estPart.push({
                 id: localId,
                 name: localName,
@@ -65,17 +68,17 @@ function estadisticas(stats) {
                 matches: 1
             })
         } else {
-            localFound.matches++
+            localFound.matches++                 //AÑADIR GOLES COMO LOCAL POR PARTIDO
             localFound.goals += localGoals
         }
 
-        let visitFound;
+        let visitFound;                    //ENCONTRAR EQUIPOS VISITANTES
         estPart.forEach(x => {
             if (x.id === visitId) {
                 visitFound = x
             }
         })
-        if (visitFound == undefined) {
+        if (visitFound == undefined) {    //CREAR ARRAY estPart[] VISITANTE
             estPart.push({
                 id: visitId,
                 name: visitName,
@@ -83,11 +86,11 @@ function estadisticas(stats) {
                 matches: 1
             })
         } else {
-            visitFound.matches++
+            visitFound.matches++               //AÑADIR GOLES COMO VISITANTE POR PARTIDO
             visitFound.goals += visitGoals
         }
     }
-    for (let j = 0; j < estPart.length; j++) {
+    for (let j = 0; j < estPart.length; j++) {         //RECORRER ARRAY CREADA estPart[] Y HACER MEDIA,ORDENADA CON SORT
         let media = estPart[j].goals / estPart[j].matches
         estPart[j].avg = media
         estPart.sort(function (a, b) {
@@ -96,7 +99,7 @@ function estadisticas(stats) {
     }
     console.log(estPart)
 
-    function crearTabla(medias) {
+    function crearTabla(medias) {              //CREAR TABLA DE MEDIA GOLEADORA(LOS 5 PRIMEROS CON SPLICE)
         let tabla_body = document.getElementById("tabla_body");
         tabla_body.innerText = ""
         let equipos5 = estPart.splice(0, 5)
@@ -125,9 +128,10 @@ function estadisticas(stats) {
     }
     crearTabla(estPart);
 }
+// FUNCION MENOS GOLEADOS COMO VISITANTE
 function estadisticas1(stats) {
     let estPart1 = []
-    for (let i = 0; i < stats.length; i++) {
+    for (let i = 0; i < stats.length; i++) {       //COGER SOLO PARTIDOS ACABADOS
         let partidoFin = stats[i].status
         if (partidoFin != "FINISHED") {
             continue
@@ -137,13 +141,13 @@ function estadisticas1(stats) {
         let visitName = stats[i].awayTeam.name
         let localGoals = stats[i].score.fullTime.homeTeam
 
-        let visitFound;
-        estPart1.forEach(x => {
+        let visitFound;                 //ENCONTRAR EQUIPOS VISITANTES
+        estPart1.forEach(x => { 
             if (x.id === visitId) {
                 visitFound = x
             }
         })
-        if (visitFound == undefined) {
+        if (visitFound == undefined) {            //CREAR ARRAY estPar1[] VISITANTE
             estPart1.push({
                 id: visitId,
                 name: visitName,
@@ -151,18 +155,18 @@ function estadisticas1(stats) {
                 matches: 1
             })
         } else {
-            visitFound.matches++
+            visitFound.matches++                   //AÑADIR GOLES LOCALES CONTRA EL VISITANTE
             visitFound.goals += localGoals
         }
     }
 
-    estPart1.sort(function (a, b) {
+    estPart1.sort(function (a, b) {              //ORDENAR DE MENOR A MAYOR
         return a.goals - b.goals
     })
 
     console.log(estPart1)
 
-    function crearTabla1(medias) {
+    function crearTabla1(medias) {            //CREAR TABLA MENOS GOLEADOS COMO VISITANTE(LOS 5 PRIMEROS CON SPLICE)
         let tabla_body2 = document.getElementById("tabla_body2");
         tabla_body2.innerText = ""
         let equipos6 = estPart1.splice(0, 5)
@@ -190,6 +194,7 @@ function estadisticas1(stats) {
     crearTabla1(estPart1)
 }
 estadisticas1(partidos)
+// QUITAR SPINNER
 function quitarSpinner() {
     let spinner = document.getElementById("spinner")
     spinner.style.display = "none"
